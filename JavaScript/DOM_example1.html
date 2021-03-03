@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM</title>
+</head>
+
+<body>
+  <h1 id="movie"></h1>
+  <h2>Characters</h2>
+  <ul id="character-list">
+  </ul>
+  
+  
+  <div id="content"></div>
+   <div class="example"></div>
+   <div class="example"></div>
+   <div class="example"></div>
+   <div class="example"></div>
+   <div class="example"></div>
+
+  <script>
+  
+  // Get references to the #movie and #character-list elements
+  const movieH1 = document.querySelector('#movie');
+  const characterListUL = document.querySelector('#character-list');
+
+  // Set the inner text of the #movie element
+  movieH1.innerText = 'The Matrix';
+
+  // Define an array of characters to loop over
+  const characters = ['Neo', 'Trinity', 'Morpheus', 'Mr. Smith'];
+
+  // Define a placeholder for our character HTML list
+  let characterHTML = '';
+
+  // For each character, add an li element string to the characterHTML string
+  for (let i = 0; i < characters.length; i++) {
+    const character = characters[i];
+    characterHTML += `<li>${character}</li>`;
+  }
+
+  // Set the inner HTML of the character list to the characterHTML string
+  characterListUL.innerHTML = characterHTML;
+    
+    
+  document.querySelector('#content').textContent = 'hey';
+
+  const exampleList = document.querySelectorAll('.example');
+  console.dir(exampleList);
+
+  for (let i = 0; i < exampleList.length; i++){
+    exampleList[i].innerText = 'All';
+  }
+
+    
+  </script>
+</body>
+
+</html>
