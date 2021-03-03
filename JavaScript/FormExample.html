@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  
+  <form onSubmit="return results();" method="post" action="mailto:me@mysite.com">
+    <label>Enter first name</label><br/>
+    <input id="fname" type="text" name="fname" />
+    <br />
+    
+    <label>Enter last name</label><br/>
+    <input id="lname" type="text" name="lname" />
+    <br/>
+  
+     <label>Enter email</label><br/>
+    <input id="email" type="text" name="email" />
+    <br/>
+    
+    <h3></h3>
+    <input id="submit" type="submit" value="send form data now"/>
+    
+    
+  </form>
+  <script>
+  function results() {
+    var fname = document.getElementById('fname').value;
+    var lname = document.getElementById('lname').value;
+    var email = document.getElementById('email').value;
+    
+    document.write("<h3>Here is your data: </h3>")
+    document.write(fname + "<br/>");
+    document.write(lname + "<br/>");
+    document.write(email + "<br/>");
+    document.write("<br/><br/>");
+    document.write("Thanks, "+fname + "!");
+  }
+  </script>
+
+</body>
+</html>
